@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def add
-    cart << session[:cart_id]
+    cart << params[:product]
+    render :index
   end
 end
